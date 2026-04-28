@@ -90,3 +90,7 @@ function showInstall(){alert('📱 앱 설치\n\niPhone: Safari → 공유(□�
 function showToast(msg,type='ok'){const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+type+' show';setTimeout(()=>{t.className='toast '+type;},2800);}
 async function doLogout(){try{await api('POST','/api/logout');}catch(e){}me=null;sheetData={};showScreen('login');document.getElementById('login-code').value='';document.getElementById('login-pw').value='';}
 </script></body></html>
+python3 << 'PYEOF'
+content = open('/workspaces/now-pt-optitrack/public/index.html').read()
+print(f"현재 파일: {len(content.splitlines())}줄")
+PYEOF
